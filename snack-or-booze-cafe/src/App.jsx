@@ -10,44 +10,46 @@ import DrinkMenu from "./DrinkMenu";
 import DrinkItem from "./DrinkItem";
 import NewDrinkForm from "./NewDrinkForm";
 import NewSnackForm from "./NewSnackForm";
+import NotFound from "./NotFound";
 
 import "./App.css";
 
 
 
+
 const drinksDefaults = [
   {
-    name: 'drinkOne',
-    description: 'this is the drinks description',
-    price: '5'
-  },
-  {
-    name: 'drinkTwo',
-    description: 'this is the drinks description',
-    price: '6'
-  },
-  {
-    name: 'drinkThree',
-    description: 'this is the drinks description',
+    name: 'Coke',
+    description: 'Do you really need a description?',
     price: '3'
   },
   {
-    name: 'drinkFour',
-    description: 'this is the drinks description',
-    price: '9'
+    name: 'Sweet Tea',
+    description: "It's like normal tea... only sweeter!",
+    price: '3'
+  },
+  {
+    name: 'Water',
+    description: 'Boring, but necessary',
+    price: '1'
+  },
+  {
+    name: 'Ice Cold Beer',
+    description: 'Fan Favorite',
+    price: '5'
   }
 ]
 
 const snacksDefaults = [
   {
-    name: 'snackOne',
-    description: 'this is the snack description',
-    price: '5'
+    name: 'Giant Pretzel',
+    description: 'Bread, but more fun',
+    price: '4'
   },
   {
-    name: 'snackTwo',
-    description: 'this is the snack description',
-    price: '6'
+    name: 'Peanuts',
+    description: 'What are you a squirell?',
+    price: '2'
   }
 ]
 
@@ -105,7 +107,7 @@ function App() {
             <Route path="/drinks" element={ <DrinkMenu items={drinks} title="Drinks" basePath="drinks" />} />
             <Route path="/drinks/:name" element={ <DrinkItem items={drinks} />} />
             <Route path="/drinks/new" element={ <NewDrinkForm items={drinks} createItem={createDrinks} basePath="Drinks" />} />
-            <Route path="*" element={<Navigate to="/" />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
       </BrowserRouter>

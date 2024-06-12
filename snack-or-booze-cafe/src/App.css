@@ -1,4 +1,3 @@
-/* Ensure the main element covers the full viewport height */
 main {
   width: 100vw;
   display: flex;
@@ -61,6 +60,9 @@ main {
   list-style: none;
   text-decoration: none;
   padding: 7px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 1.5em;
 }
 
 a {
