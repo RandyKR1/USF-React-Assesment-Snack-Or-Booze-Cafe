@@ -1,0 +1,53 @@
+nav {
+  background-image: url(https://xmple.com/wallpaper/linear-blue-violet-gradient-3840x2160-c2-141d45-371445-a-90-f-14.svg);
+  box-shadow: 0px 7px 30px 11px #151d45;
+  border-bottom: solid 2px #141d45;
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 30px;
+  overflow: hidden;
+ 
+}
+
+.nav-links {
+  align-items: center;
+  display: flex;
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+}
+
+.form-links {
+  margin-left: auto; /* Push form-links to the right */
+}
+
+nav a {
+  color: #f0f2f5;
+  text-decoration: none;
+  text-align: center;
+  padding-right: 85px;
+}
+
+nav a.active {
+  color: #f0f2f5;
+  font-weight: bold;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+nav a.active:hover {
+  text-shadow: 0px 0px 20px rgb(2, 2, 2);
+}
+
+nav a:hover {
+  text-decoration: none;
+}
+
+nav a.active.navbar-brand {
+  border-bottom: none;
+}
+
+nav a:not(.navbar-brand):hover {
+  font-weight: bold;
+}

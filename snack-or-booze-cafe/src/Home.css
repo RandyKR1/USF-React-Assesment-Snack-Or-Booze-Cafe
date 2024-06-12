@@ -1,0 +1,25 @@
+.snack-booze-count-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  
+  
+  h3{
+    margin-top: -5px;
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  .text{
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+
+  .text p{
+    margin: 0;
+  }
+
+
+
