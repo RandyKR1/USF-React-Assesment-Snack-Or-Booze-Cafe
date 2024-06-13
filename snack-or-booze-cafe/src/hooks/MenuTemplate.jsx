@@ -4,9 +4,12 @@ import {
     CardTitle,
     CardText,
   } from "reactstrap";
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
+
+
 
 const MenuTemplate = ({items, basePath, title}) => {
+    const navigate = useNavigate();
     return (
         <>
           <Card>
@@ -27,6 +30,13 @@ const MenuTemplate = ({items, basePath, title}) => {
                         </Link>
                     ))}
                 </ul>
+                <button 
+                style={{
+                    margin:'10px'
+                }}
+                onClick={() => navigate("/")}>
+                    Return Home
+            </button>
             </div>
           </Card>
         </>
