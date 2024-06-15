@@ -1,12 +1,12 @@
 nav {
-  background-image: url(https://xmple.com/wallpaper/linear-blue-violet-gradient-3840x2160-c2-141d45-371445-a-90-f-14.svg);
+  background-color: rgb(20, 28, 69, 0.85);
   box-shadow: 0px 7px 30px 11px #151d45;
   border-bottom: solid 2px #141d45;
   text-decoration: none;
   box-sizing: border-box;
   padding: 30px;
   overflow: hidden;
- 
+  top:0%;
 }
 
 .nav-links {

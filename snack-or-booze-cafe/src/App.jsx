@@ -12,8 +12,6 @@ import NewDrinkForm from "./NewDrinkForm";
 import NewSnackForm from "./NewSnackForm";
 import NotFound from "./NotFound";
 
-import "./App.css";
-
 
 
 
@@ -98,7 +96,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <NavBar />
-        <main>
           <Routes>
             <Route path="/" element={<Home snacks={snacks} drinks={drinks} />} />
             <Route path="/snacks" element={<FoodMenu items={snacks} title="Snacks" basePath="snacks" />} />
@@ -109,7 +106,6 @@ function App() {
             <Route path="/drinks/new" element={ <NewDrinkForm items={drinks} createItem={createDrinks} basePath="Drinks" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </main>
       </BrowserRouter>
     </div>
   );

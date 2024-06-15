@@ -5,7 +5,7 @@ import { Navbar, Nav, NavItem } from "reactstrap";
 
 function NavBar() {
   return (
-    <div>
+    <>
       <nav>
         <div className="nav-links">
           <Link to="/" className="navbar-brand">Snack or Booze</Link>
@@ -17,7 +17,7 @@ function NavBar() {
             </span>
         </div>
       </nav>
-    </div>
+    </>
   );
 }
 

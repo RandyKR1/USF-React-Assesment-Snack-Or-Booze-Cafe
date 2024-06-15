@@ -1,30 +1,26 @@
 import React from "react";
-import { Card, CardBody, CardTitle } from "reactstrap";
+import { Card, CardBody, CardText, CardTitle } from "reactstrap";
 import "./Home.css"
 
 function Home({snacks, drinks}) {
 
 
   return (
-    <section className="col-md-8">
-      <Card>
-        <CardBody className="text-center home">
-          <CardTitle>
-            <h3 className="font-weight-bold">
-              Welcome to Silicon Valley's premier dive cafe!
-            </h3>
-          </CardTitle>
-          <div className="snack-booze-count-container">
-
-            <span className="text">
-              <p>Pick from {snacks.length} snacks and {drinks.length} drinks using the nav bar!</p>
-            </span>
-            
-
+    <>
+      <div className="card-container home-container">
+        <div className="card home-card">
+          <div className="card-title">
+            <h2>
+              Welcome to the Lofi Dive Cafe!
+            </h2>
           </div>
-        </CardBody>
-      </Card>
-    </section>
+
+          <div className="card-text">
+              <p>Pick from {snacks.length} snacks and {drinks.length} drinks using the nav bar!</p>
+          </div>  
+        </div>
+      </div>
+    </>
   );
 }
 

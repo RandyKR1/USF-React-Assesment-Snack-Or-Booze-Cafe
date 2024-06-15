@@ -12,21 +12,21 @@ const MenuTemplate = ({items, basePath, title}) => {
     const navigate = useNavigate();
     return (
         <>
-          <Card>
-            <div className="card-body">
-                <CardTitle className="font-weight-bold text-center">
+          <div className="card-container">
+            <div className="card">
+                <div className="card-title">
                     {title} Menu
-                </CardTitle>
+                </div>
                 
-                <CardText>
+                <div className="card-text">
                     Below is our {title} Menu. 
                         <br/>
                     Click on any item to see details!
-                </CardText>
+                </div>
                 <ul className="item-list">
                     {Array.isArray(items) && items.map(item => (
                         <Link to={`/${basePath}/${item.name}`} key={item.name}>
-                            <li>{item.name}</li>
+                            <li>{item.name} ${item.price}</li>
                         </Link>
                     ))}
                 </ul>
@@ -38,7 +38,7 @@ const MenuTemplate = ({items, basePath, title}) => {
                     Return Home
             </button>
             </div>
-          </Card>
+          </div>
         </>
     );
 }

@@ -34,13 +34,13 @@ const FormTemplate = ({ createItem, basePath, items }) => {
   }
 
   return (
-    <Card className="form">
+    <div className="card-container">
 
-    <CardBody>
+    <div className="card">
 
-        <CardTitle className="font-weight-bold text-center">
+        <div className="card-title">
             Add your own {basePath} below!
-        </CardTitle>
+        </div>
 
       <form onSubmit={inputData}>
         <div>
@@ -82,9 +82,9 @@ const FormTemplate = ({ createItem, basePath, items }) => {
         <button>Add to {basePath} Menu!</button>
       </form>
 
-      </CardBody>
+      </div>
 
-    </Card>
+    </div>
   )
 }
 

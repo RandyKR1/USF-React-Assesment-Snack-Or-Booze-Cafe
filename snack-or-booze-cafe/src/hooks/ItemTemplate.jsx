@@ -10,14 +10,14 @@ const ItemTemplate = ({items}) => {
   if (!item) return <Navigate to="/" />;
 
   return (
-    <section>
-      <Card>
-        <CardBody>
-          <CardTitle className="font-weight-bold text-center">
+    <>
+      <div className="card-container">
+        <div className="card">
+          <div className="card-title">
             {item.name}
-          </CardTitle>
+          </div>
 
-          <CardText className="font-italic">
+          <div className="card-text">
             <p>
               {item.description}
             </p>
@@ -26,10 +26,10 @@ const ItemTemplate = ({items}) => {
                   <br/>
               ${item.price}
             </p>
-          </CardText>
-        </CardBody>
-      </Card>
-    </section>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 

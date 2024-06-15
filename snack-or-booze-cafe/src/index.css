@@ -4,17 +4,14 @@
   font-family: "Exo 2", sans-serif;
 }
 .App{
-  height:100vh;
-  width:100vw;
+  display: flex;
+  flex-direction: column;
+  height: 1250px;
+  width: 100vw;
 }
 
 body {
   overflow: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -22,7 +19,113 @@ body {
   background-size: cover;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+nav{
+  z-index: 1;
+}
+
+
+/* Card styling */
+.card-container {
+  box-sizing: border-box;
+  min-height: 50%;
+  max-height: 75%;
+  min-width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card{
+  background-color: rgb(20, 28, 69, 0.90);
+  background-size: 114% 127%;
+  background-position: center;
+  border: 5px solid white;
+  border-radius: 5%;
+  box-shadow: 0 2px 100px 5px rgb(252 196 126), 0 3px 1px -2px rgb(255 37 37 / 0%), 0px -1px 19px 12px rgba(47, 0, 255, 0.2);
+  width: 40%;
+  overflow-y: scroll;
+  max-height: 75%;
+  scrollbar-width: none;
+  animation: card-transition 2s ease-in 0s;
+}
+
+.home-card{
+  animation: card-transition 2s ease-in 0s;
+  padding: 30px;
+  border: 5px solid white;
+}
+
+.card-title{
+  padding-top: 15px;
+  font-size: 1.5em;
+}
+
+.card-text{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+/* Menu.jsx specific */
+.item-list{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: white;
+  padding: 0;
+  list-style: none;
+}
+
+.item-list li{
+  color: white;
+  list-style: none;
+  text-decoration: none;
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* FormTemplate.jsx specific */
+
+button{
+  margin-top: 10px; 
+  padding: 5px;
+  background-color: white;
+}
+
+input{
+  margin: 5px;
+}
+
+form{
+   margin-top: 20px
+}
+
+@keyframes card-transition {
+  0%
+    {
+      background:transparent;
+      background-size: 114% 127%;
+      background-color: rgb(20, 28, 69, 0.5);
+    }
+
+  100%
+    {
+      background-color: rgb(20, 28, 69, 0.85);
+      background-size: 114% 127%;
+      background-position: center;
+      border: 5px solid white;
+      border-radius: 5%;
+      box-shadow: 0 2px 100px 5px rgb(252 196 126), 0 3px 1px -2px rgb(255 37 37 / 0%), 0px -1px 19px 12px rgba(47, 0, 255, 0.2);
+      width: 40%;
+    }
 }
